@@ -1,38 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-     <title>Title Goes Here</title>
+     <title>DOM Play</title>
   <meta charset="utf-8" />
   <meta name="robots" content="noindex,nofollow" />
   <meta name="viewport" content="width=device-width" />
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/nav.css" />
   
-
  </head>
  <body>
      <header>
-     <h1>Title Goes here</h1>
-        <nav class="topnav" id="myTopnav">
-            <a href="index.html" class="active">Home</a>
-            <a href="#" target="_blank">Link here</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-        </nav>
+     <h1>DOM Play</h1>
+      
      </header>
      
    <main class="wrapper">
-        
-    
-    
-
+     <p>Hello, this page uses JavaScript to allow the user to click on the name of an actor and highlight their lines in a play.</p>
+     <p>This page uses data-attributes and anonymous function to loop through a nodelist and compare data-attributes to highlight or unhighllight text</p>
+     <br>
+    <div id="play">
+      <p><span data-actor="katelyn">Katelyn: Hey Gerson, I want to introduce you to a friend. He is Japanese.</span></p>
+      <p><span data-actor="gerson">Gerson: Hey Katelyn, oh really? I want to meet him</span></p>
+      <p><span data-actor="katelyn">Katelyn: Yes, come with me</span></p>
+      <p><span data-actor="katelyn">Katelyn: Okay, this is my friend Yutaro. Yutaro this is Gerson.</span></p>
+      <p><span data-actor="gerson">Gerson: Nice to meet you Yutaro</span></p>
+      <p><span data-actor="katelyn">Katelyn: Yutaro, he can speak Japanese</span></p>
+      <p><span data-actor="yutaro">Yutaro: Really? ガーソンさんは日本語できますか。</span></p>
+      <p><span data-actor="gerson">Gerson: はい、日本語できます。でも、たまに日本語を話せません。よろしくお願いします。</span></p>
+      <p><span data-actor="yutaro">Yutaro: ええーすごい。日本語が上手ですね。</span></p>
+      <p><span data-actor="gerson">Gerson: ありがとうございます。今から、ゆたろうさんと日本語がんばりますよう。</span></p>
+    </div>
+  
      <footer>
-      <p><small>&copy; 2021 by 
+      <p><small>&copy; 2022 by 
           Gerson Barrientos, All Rights Reserved ~ 
           <a id="html-checker" href="#">Check HTML</a> ~ 
           <a id="css-checker" href="#">Check CSS</a></small>
      </p>
     </footer>
   </main>
+ 
+
+  <script>
+/*
+   const spans = document.querySelectorAll('div#play span');
+   
+   console.log(spans);
+
+    for (const mySpan of spans){
+      mySpan.addEventListener('click', function(ev){
+        //alert(mySpan.dataset.actor);
+
+        highlightActor(mySpan.dataset.actor);
+
+
+      });
+    }
+
+      function highlightActor(actor){
+        for (const mySpan of spans){
+          if(actor == mySpan.dataset.actor){
+            mySpan.style.backgroundColor = "yellow";
+          }else{
+            mySpan.style.backgroundColor = "white";
+          }
+          
+        }
+      
+    }
+
+
+
+*/
+
+    
+  </script>
   <script src="js/main.js"></script>
  </body>
 </html>
